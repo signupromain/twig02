@@ -12,7 +12,11 @@ class publicController{
         }
 
         public static function contactAction($twig){
+            if(!empty($_post)){
+
+            }else{
 $datas = DT::formDatas();
             echo $twig->render("form.html.twig", ["recup"=>$datas]);
         }
+    }
 }
