@@ -22,6 +22,7 @@ if(!isset($_GET['content'])){
 }else{
     switch ($_GET['content']){
         case "contact":
+            PC::contactAction($twig);
             break;
         case "map":
 
@@ -31,4 +32,3 @@ if(!isset($_GET['content'])){
             PC:: welcomeAction($twig);
     }
 }
-PC::welcomeAction($twig);

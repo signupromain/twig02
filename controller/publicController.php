@@ -12,6 +12,7 @@ class publicController{
         }
 
         public static function contactAction($twig){
-
+$datas = DT::formDatas();
+            echo $twig->render("form.html.twig", ["recup"=>$datas]);
         }
 }
