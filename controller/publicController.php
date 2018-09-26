@@ -13,10 +13,16 @@ class publicController{
 
         public static function contactAction($twig){
             if(!empty($_post)){
-
+                $bool = DT::envoieMail($_POST);
+                if($bool){
+                    header ("Location: ./");
             }else{
-$datas = DT::formDatas();
+                    header ("Location: ./?content=contact&erreur=true");
+                }
+
+            }
+            $datas = DT::formDatas();
             echo $twig->render("form.html.twig", ["recup"=>$datas]);
-        }
+
     }
 }
