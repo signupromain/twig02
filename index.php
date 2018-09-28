@@ -25,7 +25,7 @@ if(!isset($_GET['content'])){
             PC::contactAction($twig);
             break;
         case "map":
-
+            PC:: mapAction($twig);
             break;
 
         default:

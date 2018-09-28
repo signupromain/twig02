@@ -1,10 +1,10 @@
 {% extends "base.html.twig" %}
-{% block title %}Accueil{% endblock %}
+{% block title %}{{ recup.title }}{% endblock %}
 {% block titleh1 %}{{ recup.h1 }}{% endblock %}
 {% block titleh2 %}{{ recup.h2 }}{% endblock %}
 
 {% block content %}
     {% for item in recup.content %}
         <p>{{ item }}</p>
-{% endfor %}
+    {% endfor %}
 {% endblock %}

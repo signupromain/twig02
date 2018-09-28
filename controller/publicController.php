@@ -82,4 +82,11 @@ class publicController
             echo $twig->render("form.html.twig", ["recup" => $datas]);
         }
     }
+    public static function mapAction($twig)
+    {
+        // recup datas from model
+        $datas = DT::mapDatas();
+        // view map with $datas in an associative array, with key "recup"
+        echo $twig->render("map.html.twig", ["recup" => $datas]);
+    }
 }

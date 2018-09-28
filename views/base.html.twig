@@ -1,22 +1,22 @@
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf8">
     <title>{% block title %}Défaut{% endblock %}</title>
 </head>
 <body>
-<h1>{% block titleh1 %}Titre par Défaut{% endblock %}</h1>
-<h2>{% block titleh2 %}Sous-titre par Défaut{% endblock %}</h2>
+<h1>{% block titleh1 %}Titre par défaut{% endblock %}</h1>
+<h2>{% block titleh2 %}Sous-titre par défaut{% endblock %}</h2>
 <nav>
     {% block menu %}
         <ul>
-            <li><a ref="./">Accueil</a></li>
-            <li><a ref="./?content=contact">Contact</a></li>
-            <li><a ref="./?content=map">Nous trouver</a></li>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="./?content=contact">Contact</a></li>
+            <li><a href="./?content=map">Nous trouver</a></li>
         </ul>
     {% endblock %}
 </nav>
-    <div class="content">
-        {% block content %}<p>Du contenu par défaut</p>{% endblock %}
-    </div>
+<div id="content">
+    {% block content %}<p>Du contenu par défaut</p>{% endblock %}
+</div>
 </body>
 </html>

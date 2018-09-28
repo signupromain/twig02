@@ -1,3 +1,3 @@
 {% extends "form.html.twig" %}
-{% block title %}Accueil{% endblock %}
-{% block content %} {{ parent() }} <hr>- {{ erreur|upper  }}{% endblock %}
+{# étendu de notre formulaire #}
+{% block content %}{{ parent() }} <hr> - {{ erreur|upper }}{% endblock %}
